@@ -1,12 +1,20 @@
 var app = angular.module('app', ["ngRoute"]);
-app.config(['$routeProvider', '$locationProvider'],
+app.config(['$routeProvider', '$locationProvider',
     function ($routeProvider, $locationProvider) {
         $routeProvider
             .when("/", {
-                templateUrl: "pages/home.html"
+                templateUrl: "/pages/zinas.html"
+            }).when("/fakultates", {
+                templateUrl: "/pages/fakultates.html"
+            }).when("/studentiem", {
+                templateUrl: "/pages/studentiem.html"
+            }).when("/bibliotekas", {
+                templateUrl: "/pages/bibliotekas.html"
             });
-    });
-
+    }]);
+app.controller("Ctrl", function($scope) {
+    $scope.products = ["Milk", "Bread", "Cheese"];
+});
 /*app.controller('RecipesController', [
     '$scope', '$rootScope', '$http',
     function ($scope, $rootScope, $http) {
