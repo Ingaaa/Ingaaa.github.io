@@ -3,7 +3,7 @@ app.config(['$routeProvider', '$locationProvider'],
     function ($routeProvider, $locationProvider) {
         $routeProvider
             .when("/", {
-                templateUrl: "index.html"
+                templateUrl: "pages/home.html"
             });
     });
 

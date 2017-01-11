@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+
+<html lang="lv" xml:lang="lv" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="scripts/app.js"></script>
+
+    <title>Latvijas Universitāte</title>
+
+    <style>
+        html {
+            min-width: 350px;
+        }
+        
+        body {
+            font-family: 'Fira Sans', sans-serif;
+            font-size: 16px;
+            background-image: url("Pictures/Background.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-color: beige;
+        }
+        
+        #bootstrap-overrides .bookDescription {
+            height: 400px;
+        }
+        
+        .navbar-brand img {
+            height: 50px;
+        }
+        
+        .navbar-brand {
+            padding: 10px;
+            padding-left: 20px;
+        }
+        
+        #bootstrap-overrides .nav li a {
+            height: 70px;
+            vertical-align: middle;
+            line-height: 40px;
+            width: 130px;
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: beige;
+        }
+        
+        #bootstrap-overrides .nav li a:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        
+        .navbar-toggle {
+            height: 50px;
+        }
+        
+        .nav {
+            padding-right: 10px;
+        }
+        
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.6);
+            min-width: 350px;
+            border: none;
+            border-radius: 0px;
+        }
+        
+        #bootstrap-overrides .active a {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        
+        .fixed-height400 {
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .fixed-height400 figure img {
+            height: 400px;
+        }
+        
+        .fixed-height400 figure figcaption {
+            font-family: 'Courgette', sans-serif;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            font-weight: bolder;
+            font-size: 24px;
+            letter-spacing: 1px;
+            padding: 20px;
+            opacity: 0.7;
+        }
+        
+        .fixed-height195 {
+            height: 195px;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .fixed-height195 img {
+            height: 195px;
+        }
+        
+        .title {
+            font-family: 'Fira Sans', sans-serif;
+            font-weight: bolder;
+            font-size: 14px;
+            letter-spacing: 1px;
+            padding: 10px;
+            opacity: 0.7;
+        }
+        
+        @media (min-width:0px) and (max-width: 768px) {
+            .fixed-height400 {
+                height: 195px;
+            }
+            #bootstrap-overrides .nav li a {
+                height: 40px;
+                line-height: 20px;
+                width: 100%;
+            }
+            .nav {
+                padding-right: 0px;
+            }
+        }
+        
+        @media (min-width:630px) and (max-width: 767px) {
+            .fixed-height400 figure img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        
+        #img1 {
+            background-image: url('Pictures/Atversana.jpg');
+        }
+        
+        #img2 {
+            background-image: url('Pictures/Merkis.jpg');
+        }
+        
+        #img3 {
+            background-image: url('Pictures/Radio.jpg');
+        }
+        
+        #img4 {
+            background-image: url('Pictures/Sadarbiba.jpg');
+        }
+        
+        #img5 {
+            background-image: url('Pictures/Attistibai.jpg');
+        }
+        
+        #img6 {
+            background-image: url('Pictures/Zurnals.jpg');
+        }
+        
+        #img7 {
+            background-image: url('Pictures/Studentu.jpg');
+        }
+        
+        #img8 {
+            background-image: url('Pictures/Jubileja.jpg');
+        }
+        
+        .img {
+            min-width: 100%;
+            min-height: 195px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            align-items: right;
+        }
+        
+        .arrow-left {
+            width: 0;
+            height: 0;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-right: 15px solid beige;
+            float: right;
+            opacity: 0.9;
+            position: relative;
+            top: 25px;
+        }
+        
+        .arrow-right {
+            width: 0;
+            height: 0;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-left: 15px solid beige;
+            float: left;
+            opacity: 0.9;
+            position: relative;
+            top: 25px;
+        }
+        
+        .readLeft,
+        .readRight {
+            color: beige;
+            padding: 4px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            width: 50px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+        .readLeft {
+            position: absolute;
+            bottom: 10px;
+        }
+        
+        .readRight {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+        
+        .readLeft:hover,
+        .readRight:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        
+        .clickableTile {
+            color: #333;
+        }
+        
+        .clickableTile:hover {
+            box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+
+</head>
+
+<body id="bootstrap-overrides" ng-app="app">
+    <div ng-include="'templates/Menu.html'"></div>
+    <div ng-view></div>
+    <div ng-include="'templates/Footer.html'"></div>
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12" style="padding:5px;">
+                <div class="col-md-4 col-sm-6 col-xs-12" style="padding:5px;">
+                    <a href="pages/page.html">
+                        <div class="fixed-height400 clickableTile">
+                            <figure>
+                                <img src="Pictures/ZSvetki.jpg">
+                                <figcaption style="color:#333;">Ziemassvētku vecītis - ir! Dekāni sveic visus Ziemassvētkos!</figcaption>
+                            </figure>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12" style="padding:5px;">
+                    <a href="pages/page.html">
+                        <div class="fixed-height195 clickableTile" style="margin-bottom: 10px;">
+                            <div class="col-md-6 col-sm-6 col-xs-6 fixed-height195" style="padding:0px;">
+                                <div id="img1" class="img">
+                                    <div class="arrow-left"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6 fixed-height195 title">
+                                LU kopā ar čekas zinātniskās izpētes komisiju atvērs rakstu “Lielais brālis tevi vēro” 3. sējumu
+                                <div class="readLeft">Lasīt</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="pages/page.html">
+                        <div class="fixed-height195 clickableTile" style="margin-top: 0px;">
+                            <div class="col-md-6 col-sm-6 col-xs-6 fixed-height195 title" style="text-align:right;">
+                                Mērķis – mainīt un ietekmēt dzīvi. Latvijas Universitātes nākamie 100 gadi zinātnē
+                                <div class="readRight">Lasīt</div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6 fixed-height195" style="padding:0px;">
+                                <div id="img2" class="img">
+                                    <div class="arrow-right"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12" style="padding:5px;">
+                    <a href="pages/page.html">
+                        <div class="fixed-height195 clickableTile" style="margin-bottom: 10px;">
+                            <div class="col-md-6 col-sm-6 col-xs-6 fixed-height195" style="padding:0px;">
+                                <div id="img3" class="img">
+                                    <div class="arrow-left"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6 fixed-height195 title">
+                                1. decembrī Radio NABA ēterā būs dzirdama īpaša 14. dzimšanas dienas svētku programma
+                                <div class="readLeft">Lasīt</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="pages/page.html">
+                        <div class="fixed-height195 clickableTile" style="margin-top: 0px;">
+                            <div class="col-md-6 col-sm-6 col-xs-6 fixed-height195 title" style="text-align:right;">
+                                Latvijas Universitāte sāk ilgtermiņa sadarbību ar Eiropas Ājurvēdas akadēmiju Vācijā
+                                <div class="readRight">Lasīt</div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6 fixed-height195" style="padding:0px;">
+                                <div id="img4" class="img">
+                                    <div class="arrow-right"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12" style="padding:5px;">
+                    <a href="pages/page.html">
+                        <div class="fixed-height195 clickableTile" style="margin-bottom: 10px;">
+                            <div class="col-md-6 col-sm-6 col-xs-6 fixed-height195" style="padding:0px;">
+                                <div id="img5" class="img">
+                                    <div class="arrow-left"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6 fixed-height195 title">
+                                LU rektors Indriķis Muižnieks uzklausa bijušo rektoru idejas attīstībai
+                                <div class="readLeft">Lasīt</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="pages/page.html">
+                        <div class="fixed-height195 clickableTile" style="margin-top: 0px;">
+                            <div class="col-md-6 col-sm-6 col-xs-6 fixed-height195 title" style="text-align:right;">
+                                Iznācis Latvijas Universitātes žurnāla “Alma Mater” rudens numurs
+                                <div class="readRight">Lasīt</div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6 fixed-height195" style="padding:0px;">
+                                <div id="img6" class="img">
+                                    <div class="arrow-right"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12" style="padding:5px;">
+                    <a href="pages/page.html">
+                        <div class="fixed-height195 clickableTile" style="margin-bottom: 10px;">
+                            <div class="col-md-6 col-sm-6 col-xs-6 fixed-height195" style="padding:0px;">
+                                <div id="img7" class="img">
+                                    <div class="arrow-left"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6 fixed-height195 title">
+                                Studentu dalība Latvijas Brīvības cīņās - zelta burtiem rakstīta lappuse LU vēsturē
+                                <div class="readLeft">Lasīt</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="pages/page.html">
+                        <div class="fixed-height195 clickableTile" style="margin-top: 0px;">
+                            <div class="col-md-6 col-sm-6 col-xs-6 fixed-height195 title" style="text-align:right;">
+                                Latvijas Universitāte atzīmē tās pamatlicēja Ernesta Felsberga 150 gadu jubileju
+                                <div class="readRight">Lasīt</div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6 fixed-height195" style="padding:0px;">
+                                <div id="img8" class="img">
+                                    <div class="arrow-right"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12" style="padding:5px;">
+                    <a href="pages/page.html">
+                        <div class="fixed-height400 clickableTile">
+                            <figure>
+                                <img src="Pictures/Latvija.jpg">
+                                <figcaption style="color:beige;">Latvijas Universitāte sveic valsts 98. gadadienā!</figcaption>
+                            </figure>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
