@@ -3,16 +3,16 @@ app.config(['$routeProvider', '$locationProvider',
     function ($routeProvider, $locationProvider) {
         $routeProvider
             .when("/", {
-                templateUrl: "/pages/zinas.html"
-            }).when("/zinas", {
-                templateUrl: "/pages/zinas.html"
-            }).when("/zinas/:zina", {
+                templateUrl: "/MD2/pages/zinas.html"
+            }).when("/MD2/zinas", {
+                templateUrl: "/MD2/pages/zinas.html"
+            }).when("/MD2/zinas/:zina", {
                 templateUrl: "/pages/page.html"
-            }).when("/fakultates", {
+            }).when("/MD2/fakultates", {
                 templateUrl: "/pages/fakultates.html"
-            }).when("/studentiem", {
+            }).when("/MD2/studentiem", {
                 templateUrl: "/pages/studentiem.html"
-            }).when("/bibliotekas", {
+            }).when("/MD2/bibliotekas", {
                 templateUrl: "/pages/bibliotekas.html"
             });
     }]);
