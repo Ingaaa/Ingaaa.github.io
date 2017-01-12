@@ -2,7 +2,7 @@
   "name": "app",
   "version": "1.0.0",
   "description": "App for internet search technologies",
-  "main": "./MD2/index.html",
+  "main": "./MD1/index.html",
   "scripts": {
     "test": "sdfsdf",
     "dev": "lite-server"
@@ -12,5 +12,5 @@
   "devDependencies": {
     "lite-server": "^2.2.2"
   },
-  "server": { "baseDir": "/MD2" }
+  "server": { "baseDir": "/MD1" }
 }
