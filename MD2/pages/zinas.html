@@ -3,10 +3,9 @@
         <div class="col-md-12" style="padding:5px;">
             <div class="col-md-4 col-sm-6 col-xs-12" style="padding:5px;" ng-repeat="tile in news track by $index">
                 <a ng-attr-href="#zinas/{{tile.id}}" ng-if="tile.display==='large'">
-                    <div class="fixed-height400 clickableTile">
+                    <div class="fixed-height400 clickableTile" style="background-image: url({{tile.img}});background-size: cover;">
                         <figure>
-                            <img ng-attr-src="{{tile.img}}">
-                            <figcaption style="color:rgb(51, 51, 51);">{{tile.title}}</figcaption>
+                            <figcaption ng-attr-style="color:{{tile.color}};">{{tile.title}}</figcaption>
                         </figure>
                     </div>
                 </a>

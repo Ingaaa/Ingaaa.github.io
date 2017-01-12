@@ -21,6 +21,7 @@ app.run(['$rootScope',
     function ($rootScope) {
         $rootScope.news = news;
         $rootScope.newsText = newsText;
+        $rootScope.fakultates = fakultates;
     }
 ]);
 
@@ -38,12 +39,20 @@ app.controller('PageController', [
     }
 ]);
 
+app.controller('FakultatesController', [
+    '$scope', '$rootScope',
+    function ($scope, $rootScope) {
+        $scope.fakultates = $rootScope.fakultates;
+    }
+]);
+
 var news = [
     {
         id: 0,
         title: "Ziemassvētku vecītis - ir! Dekāni sveic visus Ziemassvētkos!",
         img: "Pictures/ZSvetki.jpg",
-        display: "large"
+        display: "large",
+        color: "rgb(51,51,51)"
     },
     {
         display: "multiple",
@@ -102,6 +111,7 @@ var news = [
         title: "Latvijas Universitāte sveic valsts 98. gadadienā!",
         img: "Pictures/Latvija.jpg",
         display: "large",
+        color: "rgba(235, 235, 210, 0.8)"
     }
 ];
 
@@ -157,4 +167,60 @@ var newsText = [
         title: "Latvijas Universitāte sveic valsts 98. gadadienā!",
         startText: "Latvijas Universitāte sveic studentus, pasniedzējus un darbiniekus Latvijas 98. gadadienā!",
     }
+];
+
+var fakultates = [
+    {
+        title: "Bioloģijas fakultāte",
+        img: "Pictures/Icons/bacteria.png"
+    },
+    {
+        title: "Datorikas fakultāte",
+        img: "Pictures/Icons/monitor.png"
+    },
+    {
+        title: "Biznesa, vadības un ekonomikas fakultāte",
+        img: "Pictures/Icons/clipboard.png"
+    },
+    {
+        title: "Fizikas un matemātikas fakultāte",
+        img: "Pictures/Icons/statistics.png"
+    },
+    {
+        title: "Ģeogrāfijas un Zemes zinātņu fakultāte",
+        img: "Pictures/Icons/earth-globe.png"
+    },
+    {
+        title: "Humanitāro zinātņu fakultāte",
+        img: "Pictures/Icons/users.png"
+    },
+    {
+        title: "Juridiskā fakultāte",
+        img: "Pictures/Icons/gavel.png"
+    },
+    {
+        title: "Ķīmijas fakultāte",
+        img: "Pictures/Icons/flasks.png"
+    },
+    {
+        title: "Medicīnas fakultāte",
+        img: "Pictures/Icons/dna-structure.png"
+    },
+    {
+        title: "Pedagoģijas, psiholoģijas un mākslas fakultāte",
+        img: "Pictures/Icons/painting-palette.png"
+    },
+    {
+        title: "Sociālo zinātņu fakultāte",
+        img: "Pictures/Icons/share.png"
+    },
+    {
+        title: "Teoloģijas fakultāte",
+        img: "Pictures/Icons/bible.png"
+    },
+    {
+        title: "Vēstures un filozofijas fakultāte",
+        img: "Pictures/Icons/history.png"
+    }
+
 ];
