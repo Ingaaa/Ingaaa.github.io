@@ -1,7 +1,48 @@
-<div class="container-fluid">
+<div class="container-fluid" ng-controller="ZinasController">
     <div class="row">
-        <div class="col-md-12" style="padding:5px;">
-            <div class="col-md-4 col-sm-6 col-xs-12" style="padding:5px;">
+        <div class="col-md-12" style="padding:5px;" ng-repeat="tile in news track by $index">
+            <div class="col-md-4 col-sm-6 col-xs-12" style="padding:5px;" ng-if="tile.display==='large'">
+                <a ng-attr-href="#zinas/{{tile.id}}">
+                    <div class="fixed-height400 clickableTile">
+                        <figure>
+                            <img ng-attr-src="{{tile.img}}">
+                            <figcaption style="color:#333;">{{tile.title}}</figcaption>
+                        </figure>
+                    </div>
+                </a>
+            </div>
+            
+              <div class="col-md-4 col-sm-6 col-xs-12" style="padding:5px;" ng-if="tile.display==='multiple'">
+                <a href="#">
+                    <div class="fixed-height195 clickableTile" style="margin-bottom: 10px;">
+                        <div class="col-md-6 col-sm-6 col-xs-6 fixed-height195" style="padding:0px;">
+                            <div ng-attr-id="{{tile.smallLeft.imgId}}" class="img">
+                                <div class="arrow-left"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6 fixed-height195 title">
+                            {{tile.smallLeft.title}}
+                            <div class="readLeft">Lasīt</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="fixed-height195 clickableTile" style="margin-top: 0px;">
+                        <div class="col-md-6 col-sm-6 col-xs-6 fixed-height195 title" style="text-align:right;">
+                            {{tile.smallRight.title}}
+                            <div class="readRight">Lasīt</div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6 fixed-height195" style="padding:0px;">
+                            <div ng-attr-id="{{tile.smallRight.imgId}}" class="img">
+                                <div class="arrow-right"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            
+            <!--<div class="col-md-4 col-sm-6 col-xs-12" style="padding:5px;">
                 <a href="pages/page.html">
                     <div class="fixed-height400 clickableTile">
                         <figure>
@@ -11,34 +52,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-4 col-sm-6 col-xs-12" style="padding:5px;">
-                <a href="pages/page.html">
-                    <div class="fixed-height195 clickableTile" style="margin-bottom: 10px;">
-                        <div class="col-md-6 col-sm-6 col-xs-6 fixed-height195" style="padding:0px;">
-                            <div id="img1" class="img">
-                                <div class="arrow-left"></div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-6 fixed-height195 title">
-                            LU kopā ar čekas zinātniskās izpētes komisiju atvērs rakstu “Lielais brālis tevi vēro” 3. sējumu
-                            <div class="readLeft">Lasīt</div>
-                        </div>
-                    </div>
-                </a>
-                <a href="pages/page.html">
-                    <div class="fixed-height195 clickableTile" style="margin-top: 0px;">
-                        <div class="col-md-6 col-sm-6 col-xs-6 fixed-height195 title" style="text-align:right;">
-                            Mērķis – mainīt un ietekmēt dzīvi. Latvijas Universitātes nākamie 100 gadi zinātnē
-                            <div class="readRight">Lasīt</div>
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-6 fixed-height195" style="padding:0px;">
-                            <div id="img2" class="img">
-                                <div class="arrow-right"></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
+          
             <div class="col-md-4 col-sm-6 col-xs-12" style="padding:5px;">
                 <a href="pages/page.html">
                     <div class="fixed-height195 clickableTile" style="margin-bottom: 10px;">
@@ -132,7 +146,7 @@
                         </figure>
                     </div>
                 </a>
-            </div>
+            </div>-->
         </div>
     </div>
 </div>
