@@ -4,16 +4,16 @@ app.config(['$routeProvider', '$locationProvider',
         $routeProvider
             .when("/", {
                 templateUrl: "/MD2/pages/zinas.html"
-            }).when("/MD2/zinas", {
+            }).when("/zinas", {
                 templateUrl: "/MD2/pages/zinas.html"
-            }).when("/MD2/zinas/:zina", {
-                templateUrl: "/pages/page.html"
-            }).when("/MD2/fakultates", {
-                templateUrl: "/pages/fakultates.html"
-            }).when("/MD2/studentiem", {
-                templateUrl: "/pages/studentiem.html"
-            }).when("/MD2/bibliotekas", {
-                templateUrl: "/pages/bibliotekas.html"
+            }).when("/zinas/:zina", {
+                templateUrl: "/MD2/pages/page.html"
+            }).when("/fakultates", {
+                templateUrl: "/MD2/pages/fakultates.html"
+            }).when("/studentiem", {
+                templateUrl: "/MD2/pages/studentiem.html"
+            }).when("/bibliotekas", {
+                templateUrl: "/MD2/pages/bibliotekas.html"
             });
     }]);
 
