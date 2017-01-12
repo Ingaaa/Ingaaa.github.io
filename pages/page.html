@@ -1,7 +1,26 @@
-<div class="container-fluid">
+<div class="container-fluid" ng-controller="PageController">
     <div class="row">
         <div class="col-md-12" style="padding:5px;">
-            <div class="fixed-height600"></div>
+            <div class="fixed-height600">
+                <h2>{{zina.title}}</h2>
+                <div class="line"></div>
+                <div class="col-md-12 col-sm-12 col-xs-12" style="background-color: rgb(245, 245, 220); padding:30px; padding-top:0px; margin-bottom:30px;">
+                    <div class="contentStart">
+                        {{zina.startText}}
+                    </div>
+                </div>
+                <div style="padding:30px;">
+                    <img class="col-md-4 col-sm-6 col-xs-12" ng-attr-src="{{zina.img}}" style="display:block; box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);">
+                    <img class="col-md-4 col-sm-6 col-xs-12" ng-attr-src="{{zina.img}}" style="display:block; box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);">
+                    <img class="col-md-4 col-sm-6 col-xs-12" ng-attr-src="{{zina.img}}" style="display:block; box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);">
+                </div>
+
+                <div class="col-md-12 col-sm-12 col-xs-12" style="margin:30px; border: 1px solid rgb(51, 51, 51); display:block; box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);">
+                    <div class="contentMain">
+                        {{zina.mainText}}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
