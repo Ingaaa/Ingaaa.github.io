@@ -15,9 +15,13 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="collapseNav">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="#zinas">Ziņas<span class="sr-only">(current)</span></a></li>
-                <li><a href="#fakultates">Fakultātes</a></li>         
+                <li ng-if="activeTab==='zinas'" class="active"><a href="#zinas">Ziņas</a></li>
+                <li ng-if="activeTab!=='zinas'"><a href="#zinas">Ziņas</a></li>
+                <li ng-if="activeTab==='fakultates'" class="active"><a href="#fakultates">Fakultātes</a></li>
+                <li ng-if="activeTab!=='fakultates'"><a href="#fakultates">Fakultātes</a></li>
+
                 <li><a href="#studentiem">Studentiem</a></li>
+
                 <li><a href="#bibliotekas">Bibliotēkas</a></li>
             </ul>
         </div>

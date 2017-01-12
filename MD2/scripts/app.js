@@ -22,6 +22,8 @@ app.run(['$rootScope',
         $rootScope.news = news;
         $rootScope.newsText = newsText;
         $rootScope.fakultates = fakultates;
+        $rootScope.bibliotekas = bibliotekas;
+        $rootScope.studentiem = studentiem;
     }
 ]);
 
@@ -43,6 +45,19 @@ app.controller('FakultatesController', [
     '$scope', '$rootScope',
     function ($scope, $rootScope) {
         $scope.fakultates = $rootScope.fakultates;
+    }
+]);
+
+app.controller('BibliotekasController', [
+    '$scope', '$rootScope',
+    function ($scope, $rootScope) {
+        $scope.bibliotekas = $rootScope.bibliotekas;
+    }
+]);
+app.controller('StudentiemController', [
+    '$scope', '$rootScope',
+    function ($scope, $rootScope) {
+        $scope.studentiem = $rootScope.studentiem;
     }
 ]);
 
@@ -223,4 +238,70 @@ var fakultates = [
         img: "Pictures/Icons/history.png"
     }
 
+];
+
+var bibliotekas = [
+    {
+        title: "LU Bibliotēka",
+        img: "Pictures/Icons/learning.png"
+    },
+    {
+        title: "LU Akadēmiskā bibliotēka",
+        img: "Pictures/Icons/reading1.png"
+    },
+    {
+        title: "Kopkatalogs",
+        img: "Pictures/Icons/reading.png"
+    }
+];
+
+var studentiem = [
+    {
+        title: "Reģistrēšanās semestrim un kursiem",
+        img: "Pictures/Icons/talking.png"
+    },
+    {
+        title: "Iepazīsti LU",
+        img: "Pictures/Icons/punishment.png"
+    },
+    {
+        title: "Vakanču meklēšana",
+        img: "Pictures/Icons/answer.png"
+    },
+    {
+        title: "Atvērtā izglītība",
+        img: "Pictures/Icons/classroom2.png"
+    },
+    {
+        title: "Studentu medijs",
+        img: "Pictures/Icons/learning1.png"
+    },
+    {
+        title: "Mans portāls",
+        img: "Pictures/Icons/classroom.png"
+    },
+    {
+        title: "Studiju ceļvedis",
+        img: "Pictures/Icons/sleepy.png"
+    },
+    {
+        title: "Ieteikumi studijās",
+        img: "Pictures/Icons/classroom1.png"
+    },
+    {
+        title: "Studijas",
+        img: "Pictures/Icons/learning2.png"
+    },
+    {
+        title: "Normatīvie dokumenti",
+        img: "Pictures/Icons/student1.png"
+    },
+    {
+        title: "Studijas ārvalstīs",
+        img: "Pictures/Icons/student.png"
+    },
+    {
+        title: "Studentu aktivitātes",
+        img: "Pictures/Icons/teacher.png"
+    }
 ];

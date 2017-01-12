@@ -2,7 +2,7 @@
   "name": "app",
   "version": "1.0.0",
   "description": "App for internet search technologies",
-  "main": "MD2/index.html",
+  "main": "./MD2/index.html",
   "scripts": {
     "test": "sdfsdf",
     "dev": "lite-server"
