@@ -1,4 +1,18 @@
-<div class="wrapper">
-    <header class="page-header" style="height:400px;background-color:#eeeeee;">
-    </header>
+<div class="wrapper" ng-controller="InspireController">
+    <section class="main-content">
+        <div class="container">
+            <div class="row-fluid productsFromTop">
+                <div class="span3 product" ng-repeat="inspire in inspires track by $index">
+                    <a ng-attr-href="#shop/{{inspire.id}}">
+                        <figure>
+                            <img ng-attr-src="{{inspire.img}}">
+                            <figcaption>
+                                <h5>{{inspire.title}}</h5>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>

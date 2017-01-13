@@ -25,9 +25,10 @@
 
     <div class="navbar navbar-fixed-top" ng-include="'templates/Menu.html'"></div>
 
-    <div ng-view class="wrapper"></div>
-
-    <footer class="footer" ng-include="'templates/Footer.html'"></footer>
+    <div ng-view class="fromTop"></div>
+    <footer class="footer fromTop">
+        <div class="container" ng-include="'templates/Footer.html'"></div>
+    </footer>
 </body>
 
 </html>

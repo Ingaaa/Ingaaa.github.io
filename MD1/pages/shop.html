@@ -1,4 +1,18 @@
-<div class="wrapper">
-    <header class="page-header" style="height:400px;background-color:#eeeeee;">
-    </header>
+<div class="wrapper" ng-controller="ShopController">
+    <section class="main-content">
+        <div class="container">
+            <div class="row-fluid productsFromTop">
+                <div class="span3 product" ng-repeat="product in products track by $index">
+                    <a href="#shop">
+                        <figure>
+                            <img ng-attr-src="{{product.img}}">
+                            <figcaption>
+                                <h5>{{product.title}}</h5>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>

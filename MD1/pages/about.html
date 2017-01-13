@@ -1,4 +1,35 @@
-<div class="wrapper">
-    <header class="page-header" style="height:400px;background-color:#eeeeee;">
-    </header>
+<div class="wrapper" ng-controller="AboutController">
+    <section class="main-content">
+        <div class="container">
+            <div class="row-fluid productsFromTop" style="background-color:white;">
+                <div class="span12" style="padding:30px;">
+                    <div class="title">
+                        About our company
+                    </div>
+                    <hr>
+                    <div class="text">
+                        As a leading florist in Latvia, Daisy Flower Shop offers top quality flower arrangements and gifts for any occasion. The
+                        expert florists at Daisy Flower Shop are committed to designing beautiful, quality arrangements and
+                        providing exceptional customer service to our customers. We offer reliable delivery and can even
+                        provide same-day delivery services. If you need to deliver across the country, our dependable florist
+                        network offers nationwide flower delivery.
+                        </br>
+                        Bright, fresh flowers make a thoughtful gift for any type of occasion. Daisy Flower Shop has a wide variety of beautiful
+                        arrangements available. From gorgeous anniversary flowers and Mother’s Day flowers to sympathetic
+                        get well flowers and funeral flowers, floral gifts are the perfect way to show just how much you
+                        care. Trust Daisy Flower Shop for local, high-quality flower arrangements like cheerful birthday
+                        flowers for your friends and family or stunning Valentine’s Day flowers for the one you love.
+                    </div>
+                </div>
+                <div class="span12" style="padding:30px;" ng-repeat="value in values track by $index">
+                    <div class="span3" ng-attr-style="background-image:url('{{value.img}}'); height:150px; background-repeat:no-repeat; background-position:center; margin-right:20px;">
+
+                    </div>
+                    <div class="span3" style="height:150px;text-align:left;line-height: 150px;border-right:none;">
+                        <span style=" display: inline-block;vertical-align: middle;line-height: normal;font-size: 16px;" class="text">{{value.title}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
