@@ -37,9 +37,6 @@ body {
 }
 .wrapper {
     width: 100%;
-    /*min-height: 100%;
-    height: auto !important;
-    height: 100%;*/
     margin: 0
 }
 a {
@@ -62,12 +59,6 @@ a:hover,a:focus {
 .span4 {
     width: 320px
 }
-/*.span2 {
-    width: 160px
-}*/
-/*.row-fluid .span2 {
-    width: 16.666666666666664%;
-}*/
 .row-fluid {
     width: 100%;
     *zoom:1;border-bottom: 1px solid #eeeeee
@@ -90,7 +81,7 @@ a:hover,a:focus {
     *margin-left: -0.052083333333333336%;
     border-right: 1px solid #eeeeee
 }
-.row-fluid.noborder,/*.text-content .row-fluid [class*="span"]*/ {
+.row-fluid.noborder {
     border: 0
 }
 .row-fluid [class*="span"]:first-child {
@@ -104,22 +95,7 @@ a:hover,a:focus {
     width: 33.33333333333333%;
     *width: 33.28124999999999%
 }
-/*.span6 {
-    width: 480px
-}*/
-
-/*.span12 {
-    width: 960px
-}*/
-/*.row-fluid .span12 {
-    width: 99.99999999999999%;
-    *width: 99.94791666666666%
-}*/
-/*.row-fluid .span6 {
-    width: 49.99999999999999%;
-    *width: 49.94791666666666%
-}*/
-/*[class*="span"].hide,*/.row-fluid [class*="span"].hide {
+.row-fluid [class*="span"].hide {
     display: none
 }
 [class*="span"].pull-right,.row-fluid [class*="span"].pull-right {
@@ -287,18 +263,6 @@ hr {
     margin: 0;
     border-bottom: 1px solid #eeeeee
 }
-/*.navbar-inner {
-    min-height: 40px;
-    *zoom:1}
-
-.navbar-inner:before,.navbar-inner:after {
-    display: table;
-    content: "";
-    line-height: 0
-}*/
-/*.navbar-inner:after {
-    clear: both
-}*/
 .nav-collapse.collapse {
     height: auto;
     overflow: visible
@@ -725,10 +689,6 @@ footer.footer .pull-right {
       .row-fluid .span6 {
         width: 49.99999999999999% !important
     }
-    /*.fromTop{
-    top: 80px;
-    position: relative
-}*/
 .product figure figcaption h5{
        line-height: 16px;
        font-size: 14px;
