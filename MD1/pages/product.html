@@ -1,0 +1,31 @@
+<div class="wrapper" ng-controller="ProductController">
+    <section class="main-content">
+        <div class="container">
+            <div class="row-fluid productsFromTop" style="background-color:white;">
+                <div class="span12" style="padding:30px;">
+                    <div class="title">
+                        {{product.title}}
+                    </div>
+
+                    <div class="span8" style="border:none;">
+                        <div class="productPicture" ng-attr-style="background-image:url({{product.img}});">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="text" style="padding-top: 30px;">
+                        <div class="smallHeading">
+                            Description
+                        </div>
+                        {{product.description}}
+                        <br>
+                        <br>
+                        <ul style="list-style: square inside;">
+                            <li ng-repeat="bullet in product.bullets track by $index">{{bullet}}</li>
+                        </ul>
+                    </div>
+                    <hr style="margin-top:30px;">
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
