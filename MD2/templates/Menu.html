@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" ng-controller="MenuController">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -15,14 +15,10 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="collapseNav">
             <ul class="nav navbar-nav navbar-right">
-                <li ng-if="activeTab==='zinas'" class="active"><a href="#zinas">Ziņas</a></li>
-                <li ng-if="activeTab!=='zinas'"><a href="#zinas">Ziņas</a></li>
-                <li ng-if="activeTab==='fakultates'" class="active"><a href="#fakultates">Fakultātes</a></li>
-                <li ng-if="activeTab!=='fakultates'"><a href="#fakultates">Fakultātes</a></li>
-
-                <li><a href="#studentiem">Studentiem</a></li>
-
-                <li><a href="#bibliotekas">Bibliotēkas</a></li>
+                <li ng-attr-class="{{getClass('/zinas')}}"><a href="#zinas">Ziņas</a></li>
+                <li ng-attr-class="{{getClass('/fakultates')}}"><a href="#fakultates">Fakultātes</a></li>
+                <li ng-attr-class="{{getClass('/studentiem')}}"><a href="#studentiem">Studentiem</a></li>
+                <li ng-attr-class="{{getClass('/bibliotekas')}}"><a href="#bibliotekas">Bibliotēkas</a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->

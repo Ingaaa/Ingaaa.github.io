@@ -60,6 +60,14 @@ app.controller('StudentiemController', [
         $scope.studentiem = $rootScope.studentiem;
     }
 ]);
+app.controller('MenuController', [
+    '$scope', '$rootScope', '$location',
+    function ($scope, $rootScope, $location) {
+        $scope.getClass = function (path) {
+            return $location.path().indexOf(path) ? '' : 'active';
+        }
+    }
+]);
 
 var news = [
     {

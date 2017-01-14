@@ -1,16 +1,18 @@
 {
-  "name": "app",
-  "version": "1.0.0",
-  "description": "App for internet search technologies",
-  "main": "./MD1/index.html",
-  "scripts": {
-    "test": "sdfsdf",
-    "dev": "lite-server"
-  },
-  "author": "Inga",
-  "license": "ISC",
-  "devDependencies": {
-    "lite-server": "^2.2.2"
-  },
-  "server": { "baseDir": "/MD1" }
+    "name": "app",
+    "version": "1.0.0",
+    "description": "App for internet search technologies",
+    "main": "./MD2/index.html",
+    "scripts": {
+        "test": "sdfsdf",
+        "dev": "lite-server"
+    },
+    "author": "Inga",
+    "license": "ISC",
+    "devDependencies": {
+        "lite-server": "^2.2.2"
+    },
+    "server": {
+        "baseDir": "/MD2"
+    }
 }
