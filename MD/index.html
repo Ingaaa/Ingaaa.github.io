@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="lv" xml:lang="lv" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet" type="text/css" href="style.css" />-->
+
+    <!-- Angular -->
+    <script src="libs/angular/angular.js"></script>
+    <script src="libs/angular-route/angular-route.js"></script>
+    <script src="libs/angular-animate/angular-animate.js"></script>
+
+    <!-- Bootstrap -->
+    <!-- link for customization http://getbootstrap.com/customize/?id=cba411d5dd68b15404a964020411ca7c -->
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+    <script src="libs/ui-bootstrap-custom-build/ui-bootstrap-custom-tpls-2.5.0.js"></script>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT|Oswald" rel="stylesheet">
+
+    <script src="scripts/app.js"></script>
+    <style>
+        /*
+        #ffc3a0	(255,195,160)
+#ffdab9	(255,218,185)
+#ff7373	(255,115,115)
+#cbbeb5	(203,190,181)
+#0e2f44	(14,47,68)*/
+        /* h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Oswald', sans-serif;
+            color: rgb(255,115,115);
+        }
+        
+        body {
+            font-family: 'PT Sans', sans-serif;
+            ;
+            font-weight: 400;
+            color: rgb(61, 82, 94);
+        }*/
+        
+        .navbar {
+            margin-bottom: 0px;
+            background-color: rgba(203,190,181, 0.2);
+        }
+        
+        .navbar-default .navbar-nav>li>a {
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+        }
+        
+        .navbar-default .navbar-nav>li>a:hover,
+        .navbar-default .navbar-nav>li>a:active {
+            text-shadow: 1px 1px #ffc3a0;
+        }
+        
+        .home {
+            background-image: url('pictures/background.jpeg');
+            background-repeat: no-repeat;
+            /*background-attachment: fixed;*/
+            background-position: center;
+            background-size: cover
+        }
+        
+        .view {
+            min-height: 100vh;
+        }
+    </style>
+
+    <title>Daisy</title>
+</head>
+
+<body ng-app="app">
+    <div ng-include="'templates/Menu.html'"></div>
+    <div ng-view></div>
+    <!--<div ng-view class="fromTop"></div>
+    <footer class="footer fromTop">
+        <div class="container" ng-include="'templates/Footer.html'"></div>
+    </footer>-->
+</body>
+
+</html>
