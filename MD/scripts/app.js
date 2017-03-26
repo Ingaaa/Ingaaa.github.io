@@ -8,13 +8,13 @@ app.config(['$routeProvider', '$locationProvider',
     function ($routeProvider, $locationProvider) {
         $routeProvider
             .when("/", {
-                templateUrl: "/MD/pages/home.html"
+                templateUrl: "/pages/home.html"
             }).when("/sakums", {
-                templateUrl: "/MD/pages/home.html"
+                templateUrl: "/pages/home.html"
             }).when("/par", {
-                templateUrl: "/MD/pages/about.html"
+                templateUrl: "/pages/about.html"
             }).when("/galerija", {
-                templateUrl: "/MD/pages/galery.html"
+                templateUrl: "/pages/galery.html"
             });
         $locationProvider.hashPrefix('');
     }]);
