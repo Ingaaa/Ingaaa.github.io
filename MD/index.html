@@ -24,6 +24,7 @@
     <script src="scripts/app.js"></script>
     <style>
         /*
+        http://www.color-hex.com/color-palette/35007
         #ffc3a0	(255,195,160)
 #ffdab9	(255,218,185)
 #ff7373	(255,115,115)
@@ -46,9 +47,15 @@
             color: rgb(61, 82, 94);
         }*/
         
+        body {
+            background-color: rgb(238, 238, 238);
+            line-height: 2;
+            letter-spacing: 0.5px
+        }
+        
         .navbar {
             margin-bottom: 0px;
-            background-color: rgba(203,190,181, 0.2);
+            background-color: rgb(238, 238, 238);
         }
         
         .navbar-default .navbar-nav>li>a {
@@ -61,16 +68,33 @@
             text-shadow: 1px 1px #ffc3a0;
         }
         
-        .home {
-            background-image: url('pictures/background.jpeg');
-            background-repeat: no-repeat;
-            /*background-attachment: fixed;*/
-            background-position: center;
-            background-size: cover
+        .navbar-default .navbar-nav>.active>a,
+        .navbar-default .navbar-nav>.active>a:hover,
+        .navbar-default .navbar-nav>.active>a:focus {
+            color: #ff7373;
+            background-color: transparent;
+            text-shadow: 1px 1px #ffc3a0;
+        }
+        
+        .navbar-default .navbar-collapse {
+            border-top: none;
+            border-left: none;
+            border-right: none;
         }
         
         .view {
             min-height: 100vh;
+            margin: 0px 50px;
+            background-color: white;
+            padding: 30px;
+        }
+        
+        .home {
+            background-image: url('pictures/background.jpeg');
+            background-repeat: no-repeat;
+            margin: 0px;
+            background-position: center;
+            background-size: cover
         }
     </style>
 
