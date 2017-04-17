@@ -106,7 +106,7 @@
         .view {
             min-height: 100vh;
             margin: 0px 50px;
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgb(255, 255, 255);
             padding: 30px;
         }
         
@@ -121,12 +121,17 @@
         .pictureTile {
             background-repeat: no-repeat;
             height: 250px;
-            margin-top: 15px;
-            margin-bottom: 15px;
+            /*margin-top: 15px;
+            margin-bottom: 15px;*/
             background-position: center;
             background-size: cover;
             /*margin: 20px;*/
-            /* border: 1px solid rgb(238, 238, 238);*/
+            border: 1px solid rgb(255, 255, 255);
+        }
+        
+        .pictureTile:hover {
+            z-index: 99;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
         }
         
         .centered-content {
@@ -276,6 +281,13 @@
                 float: none;
                 text-align: center;
             }
+        }
+        
+        .gallery.container-fluid,
+        .gallery .col-md-4,
+        .gallery .col-sm-6,
+        .gallery .col-xs-12 {
+            padding: 0px;
         }
     </style>
 
