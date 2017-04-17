@@ -48,14 +48,13 @@
         }*/
         
         body {
-            /*background-color: rgb(14, 47, 68);*/
-            background: #ffc3a0;
+            background: rgba(14, 47, 68, 0.5);
             /* For browsers that do not support gradients */
-            background: -webkit-linear-gradient(left bottom, #ffc3a0, #cbbeb5);
+            background: -webkit-linear-gradient(left bottom, #ff7373, rgba(14, 47, 68, 0.5));
             /* For Safari 5.1 to 6.0 */
-            background: -o-linear-gradient(top right, #ffc3a0, #cbbeb5);
+            background: -o-linear-gradient(top right, #ff7373, rgba(14, 47, 68, 0.5));
             /* For Opera 11.1 to 12.0 */
-            background: -moz-linear-gradient(top right, #ffc3a0, #cbbeb5);
+            background: -moz-linear-gradient(top right, #ff7373, rgba(14, 47, 68, 0.5));
             /* For Firefox 3.6 to 15 */
             background: linear-gradient(to top right, #ff7373, rgba(14, 47, 68, 0.5));
             /* Standard syntax (must be last) */
@@ -107,7 +106,7 @@
         .view {
             min-height: 100vh;
             margin: 0px 50px;
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.8);
             padding: 30px;
         }
         
@@ -265,6 +264,10 @@
         
         .pull-right {
             float: right;
+        }
+        
+        footer.container {
+            padding: 0px;
         }
         
         @media (max-width: 767px) {
