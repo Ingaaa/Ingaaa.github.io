@@ -53,6 +53,18 @@
             letter-spacing: 0.5px
         }
         
+        a {
+            color: #ff7373;
+        }
+        
+        a:hover,
+        a:active,
+        a:focus {
+            text-shadow: 1px 1px #ffc3a0;
+            color: #ff7373;
+            text-decoration: none;
+        }
+        
         .navbar {
             margin-bottom: 0px;
             /*background-color: rgb(238, 238, 238);*/
@@ -69,18 +81,18 @@
             font-size: 20px;
         }
         
-        .navbar-default .navbar-nav>li>a:hover,
+        /*.navbar-default .navbar-nav>li>a:hover,
         .navbar-default .navbar-nav>li>a:active {
             text-shadow: 1px 1px #ffc3a0;
-        }
+        }*/
         
-        .navbar-default .navbar-nav>.active>a,
+        /*.navbar-default .navbar-nav>.active>a,
         .navbar-default .navbar-nav>.active>a:hover,
         .navbar-default .navbar-nav>.active>a:focus {
             color: #ff7373;
             background-color: transparent;
             text-shadow: 1px 1px #ffc3a0;
-        }
+        }*/
         
         .view {
             min-height: 100vh;
@@ -236,6 +248,10 @@
             background-color: white;
         }
         
+        .pull-right {
+            float: right;
+        }
+        
         @media (max-width: 767px) {
             footer .row-fluid>div {
                 width: 100%;
@@ -253,7 +269,7 @@
     <div ng-view></div>
     <!--<div ng-view class="fromTop"></div>-->
     <footer>
-        <div class="container" ng-include="'templates/Footer.html'"></div>
+        <div ng-include="'templates/Footer.html'"></div>
     </footer>
 </body>
 
