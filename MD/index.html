@@ -225,12 +225,6 @@
             padding-right: 8px;
         }
         
-        footer .row-fluid>div {
-            width: 100%;
-            float: none;
-            text-align: center;
-        }
-        
         .row-fluid {
             display: block;
             min-height: 30px;
@@ -240,6 +234,14 @@
         
         footer {
             background-color: white;
+        }
+        
+        @media (max-width: 767px) {
+            footer .row-fluid>div {
+                width: 100%;
+                float: none;
+                text-align: center;
+            }
         }
     </style>
 
