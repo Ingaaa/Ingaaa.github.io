@@ -1,3 +1,3 @@
-/*module.exports = {
-  "server": { "baseDir": "./MD2" }
-};*/
+module.exports = {
+  "server": { "baseDir": "./MD" }
+};

@@ -48,7 +48,7 @@
         }*/
         
         body {
-            background-color: rgb(238, 238, 238);
+            background-color: rgb(14,47,68);
             line-height: 2;
             letter-spacing: 0.5px
         }
@@ -107,6 +107,99 @@
             /*margin: 20px;*/
             /* border: 1px solid rgb(238, 238, 238);*/
         }
+        
+        .centered-content {
+            /*width: 600px;*/
+            height: 320px;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            /*it can be fixed too*/
+            left: 0;
+            right: 0;
+            top: 70px;
+            bottom: 0;
+            margin: auto;
+            /*this to solve "the content will not be cut when the window is smaller than the content": */
+            max-width: 100%;
+            max-height: 100%;
+            overflow: auto;
+            box-shadow: 0px 0px 30px #ffc3a0;
+            text-align: center;
+        }
+        
+        .main-title {
+            color: white;
+            font-size: 72px;
+            line-height: 1.1;
+            font-weight: 800;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 3px #666;
+            margin-top: 0px;
+        }
+        
+        .subtitle {
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 1.1;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            display: block;
+        }
+        
+        h2.subtitle:after {
+            content: "_";
+            display: block;
+            width: 50px;
+            margin: -10px auto 20px;
+            color: #fff;
+        }
+        
+        .navbar-brand img {
+            height: 60px;
+            padding-left: 15px;
+        }
+        
+        .navbar-brand {
+            padding-bottom: 5px;
+            padding-top: 5px;
+        }
+        
+        .centered-content img {
+            margin-top: 20px;
+        }
+        
+        .button {
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            font-weight: 400;
+            text-shadow: 2px 2px 3px grey;
+            display: inline-block;
+            padding: 12px 24px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 14px;
+            line-height: 28px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            border: 1px solid #ccc;
+            vertical-align: middle;
+            cursor: pointer;
+            border-radius: 4px;
+            -webkit-transition: background-color 0.2s linear, border-color 0.2s linear;
+            transition: background-color 0.2s linear, border-color 0.2s linear;
+        }
+        
+        .button:hover,
+        .button:focus,
+        .button:active {
+            color: #000;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+        }
+        
     </style>
 
     <title>Daisy</title>

@@ -2,7 +2,7 @@
     "name": "app",
     "version": "1.0.0",
     "description": "App for internet search technologies",
-    "main": "./MD1/index.html",
+    "main": "./MD/index.html",
     "scripts": {
         "test": "sdfsdf",
         "dev": "lite-server"
@@ -13,6 +13,6 @@
         "lite-server": "^2.2.2"
     },
     "server": {
-        "baseDir": "/MD1"
+        "baseDir": "/MD"
     }
 }
