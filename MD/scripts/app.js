@@ -15,6 +15,8 @@ app.config(['$routeProvider', '$locationProvider',
                 templateUrl: "pages/about.html"
             }).when("/galerija", {
                 templateUrl: "pages/galery.html"
+            }).when("/skatuves", {
+                templateUrl: "pages/stages.html"
             });
         $locationProvider.hashPrefix('');
     }]);
@@ -22,6 +24,7 @@ app.config(['$routeProvider', '$locationProvider',
 app.run(['$rootScope',
     function ($rootScope) {
         $rootScope.pictures = pictures;
+        $rootScope.stages = stages;
     }
 ]);
 
@@ -39,6 +42,13 @@ app.controller('GaleryController', [
     '$scope', '$rootScope',
     function ($scope, $rootScope) {
         $scope.pictures = $rootScope.pictures;
+    }
+]);
+
+app.controller('StagesController', [
+    '$scope', '$rootScope',
+    function ($scope, $rootScope) {
+        $scope.stages = $rootScope.stages;
     }
 ]);
 
@@ -69,5 +79,20 @@ var pictures = [
     },
     {
         img: "pictures/img9.jpg"
+    }
+];
+
+var stages = [
+    {
+        img: "pictures/stage1.png"
+    },
+    {
+        img: "pictures/stage2.png"
+    },
+    {
+        img: "pictures/stage3.png"
+    },
+    {
+        img: "pictures/stage4.png"
     }
 ];
