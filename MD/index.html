@@ -9,14 +9,14 @@
     <!--<link rel="stylesheet" type="text/css" href="style.css" />-->
 
     <!-- Angular -->
-    <script src="libs/angular/angular.js"></script>
-    <script src="libs/angular-route/angular-route.js"></script>
-    <script src="libs/angular-animate/angular-animate.js"></script>
+    <script src="libs/angular/angular.min.js"></script>
+    <script src="libs/angular-route/angular-route.min.js"></script>
+    <script src="libs/angular-animate/angular-animate.min.js"></script>
 
     <!-- Bootstrap -->
     <!-- link for customization http://getbootstrap.com/customize/?id=cba411d5dd68b15404a964020411ca7c -->
     <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
-    <script src="libs/ui-bootstrap-custom-build/ui-bootstrap-custom-tpls-2.5.0.js"></script>
+    <script src="libs/ui-bootstrap-custom-build/ui-bootstrap-custom-tpls-2.5.0.min.js"></script>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT|Oswald" rel="stylesheet">
@@ -76,7 +76,6 @@
         
         .navbar {
             margin-bottom: 0px;
-            /*background-color: rgb(238, 238, 238);*/
             border: none;
             box-shadow: 0px 1px 3px #ffc3a0;
         }
@@ -161,6 +160,14 @@
             text-shadow: 1px 1px #ffc3a0;
         }
         
+        .navbar-collapse.collapse {
+            display: none;
+        }
+        
+        .navbar-collapse.in.collapse {
+            display: block;
+        }
+        
         .view {
             min-height: 100vh;
             margin: 0px 50px;
@@ -172,26 +179,30 @@
             background-image: url('pictures/background.jpeg');
             background-repeat: no-repeat;
             margin: 0px;
+            padding: 0px;
             background-position: center;
-            background-size: cover
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         
         .pictureTile {
             background-repeat: no-repeat;
             height: 250px;
-            /*margin-top: 15px;
-            margin-bottom: 15px;*/
             background-position: center;
             background-size: cover;
-            /*margin: 20px;*/
             border: 1px solid rgb(255, 255, 255);
         }
+        
         .pictureTile.stage {
             height: 700px;
         }
         
-        .pictureTile:nth-child(2n) {
-            border: none;
+        .pictureTile.newsTile {
+            height: 300px;
+            padding: 20px;
+            color: #fff;
         }
         
         .pictureTile:hover {
@@ -200,20 +211,7 @@
         }
         
         .centered-content {
-            /*width: 600px;*/
-            height: 320px;
             background-color: rgba(0, 0, 0, 0.5);
-            position: absolute;
-            /*it can be fixed too*/
-            left: 0;
-            right: 0;
-            top: 70px;
-            bottom: 0;
-            margin: auto;
-            /*this to solve "the content will not be cut when the window is smaller than the content": */
-            max-width: 100%;
-            max-height: 100%;
-            overflow: auto;
             box-shadow: 0px 0px 30px #ffc3a0;
             text-align: center;
         }
@@ -244,6 +242,15 @@
             width: 50px;
             margin: -10px auto 20px;
             color: #fff;
+        }
+        
+        h2.subtitle.news:after {
+            content: none;
+        }
+        
+        h2.subtitle.news {
+            text-shadow: 2px 2px 3px #666;
+            font-size: 30px;
         }
         
         .navbar-brand img {
@@ -326,15 +333,6 @@
             text-align: right;
         }
         
-        @media only screen and (max-width: 800px) {
-            .text-align-left {
-                text-align: center !important;
-            }
-            .text-align-right {
-                text-align: center !important;
-            }
-        }
-        
         footer {
             border-top: 1px soldi rgb(14, 47, 68);
             background-color: white;
@@ -360,6 +358,63 @@
         .pictureTile {
             position: relative;
             transition: box-shadow 0.2s linear, background-color 0.2s linear;
+        }
+        
+        .news-content {
+            color: #fff;
+            box-shadow: 0px 0px 10px #ffc3a0;
+            padding: 10px;
+        }
+        /*Extra small devices (Phones)*/
+        
+        @media (max-width: 767px) {
+            .text-align-left {
+                text-align: center !important;
+            }
+            .text-align-right {
+                text-align: center !important;
+            }
+        }
+        
+        .read-more {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            vertical-align: middle;
+        }
+        
+        .read-more:hover {
+            cursor: pointer;
+            text-shadow: 1px 1px 2px #666;
+        }
+        /*Small devices (Tablets)*/
+        
+        @media (max-width: 991px) {
+            .pictureTile.newsTile {
+                height: 280px!important;
+            }
+            h2.subtitle.news {
+                font-size: 28px;
+            }
+        }
+        
+        @media (max-width: 1199px) {
+            .pictureTile.newsTile {
+                height: 350px!important;
+            }
+        }
+        
+        @media (max-width: 520px) {
+            .pictureTile.newsTile {
+                height: 400px!important;
+            }
+            h2.subtitle.news {
+                text-shadow: 1px 1px 2px #666;
+                font-size: 26px;
+            }
         }
     </style>
 
