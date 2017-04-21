@@ -5,16 +5,16 @@ http://www.color-hex.com/color-palette/35007
 #ff7373	(255,115,115)
 #cbbeb5	(203,190,181)
 #0e2f44	(14,47,68)*/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+#body h1,
+#body h2,
+#body h3,
+#body h4,
+#body h5,
+#body h6 {
     font-family: 'Oswald', sans-serif;
 }
 
-body {
+#body body {
     background: rgba(14, 47, 68, 0.5);
     /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(left bottom, #ff7373, rgba(14, 47, 68, 0.5));
