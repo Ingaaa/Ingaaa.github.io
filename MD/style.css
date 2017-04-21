@@ -5,22 +5,14 @@ http://www.color-hex.com/color-palette/35007
 #ff7373	(255,115,115)
 #cbbeb5	(203,190,181)
 #0e2f44	(14,47,68)*/
-/* h1,
+h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
     font-family: 'Oswald', sans-serif;
-    color: rgb(255,115,115);
 }
-
-body {
-    font-family: 'PT Sans', sans-serif;
-    ;
-    font-weight: 400;
-    color: rgb(61, 82, 94);
-}*/
 
 body {
     background: rgba(14, 47, 68, 0.5);
@@ -34,7 +26,8 @@ body {
     background: linear-gradient(to top right, #ff7373, rgba(14, 47, 68, 0.5));
     /* Standard syntax (must be last) */
     line-height: 2;
-    letter-spacing: 0.5px
+    letter-spacing: 0.5px;
+    font-family: 'Old Standard TT', serif;
 }
 
 a {
