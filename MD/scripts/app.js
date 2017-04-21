@@ -15,8 +15,8 @@ app.config(['$routeProvider', '$locationProvider',
                 templateUrl: "pages/about.html"
             }).when("/galerija", {
                 templateUrl: "pages/galery.html"
-            }).when("/skatuves", {
-                templateUrl: "pages/stages.html"
+            }).when("/laikalinija", {
+                templateUrl: "pages/timeline.html"
             }).when("/jaunumi", {
                 templateUrl: "pages/news.html"
             });
@@ -25,8 +25,7 @@ app.config(['$routeProvider', '$locationProvider',
 
 app.run(['$rootScope',
     function ($rootScope) {
-        $rootScope.pictures = pictures;
-        $rootScope.stages = stages;
+        $rootScope.pictures = pictures;;
         $rootScope.news = news;
     }
 ]);
@@ -38,20 +37,6 @@ app.controller('MenuController', [
         $scope.getClass = function (path) {
             return $location.path().indexOf(path) ? '' : 'active';
         }
-    }
-]);
-
-app.controller('GaleryController', [
-    '$scope', '$rootScope',
-    function ($scope, $rootScope) {
-        $scope.pictures = $rootScope.pictures;
-    }
-]);
-
-app.controller('StagesController', [
-    '$scope', '$rootScope',
-    function ($scope, $rootScope) {
-        $scope.stages = $rootScope.stages;
     }
 ]);
 
@@ -91,21 +76,6 @@ var pictures = [
     },
     {
         img: "pictures/img12.jpg"
-    }
-];
-
-var stages = [
-    {
-        img: "pictures/stage1.png"
-    },
-    {
-        img: "pictures/stage2.png"
-    },
-    {
-        img: "pictures/stage3.png"
-    },
-    {
-        img: "pictures/stage4.png"
     }
 ];
 
