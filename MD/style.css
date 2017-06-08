@@ -15,16 +15,6 @@ http://www.color-hex.com/color-palette/35007
 }
 
 body#body {
-    background: rgba(14, 47, 68, 0.5);
-    /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(left bottom, #ff7373, rgba(14, 47, 68, 0.5));
-    /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(top right, #ff7373, rgba(14, 47, 68, 0.5));
-    /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(top right, #ff7373, rgba(14, 47, 68, 0.5));
-    /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to top right, #ff7373, rgba(14, 47, 68, 0.5));
-    /* Standard syntax (must be last) */
     line-height: 2;
     letter-spacing: 0.5px;
     font-family: 'Old Standard TT', serif;
@@ -90,7 +80,7 @@ a:focus {
 }
 
 .about {
-    background-image: url('pictures/background2.jpeg');
+    background-image: url('pictures/AboutBackground.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -255,7 +245,9 @@ footer {
 }
 
 .time-line-view {
-    background-image: url('pictures/background3.jpg');
+    background-image: url('pictures/TimelineBackground.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .view.container-fluid {
@@ -300,8 +292,11 @@ footer {
 }
 
 .about-content {
-    border-left: 1px solid #fff;
-    border-right: 1px solid #fff;
+    border: 1px solid #fff;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-top: 1px;
+    margin-bottom: 1px;
+    padding: 15px;
 }
 
 .timeline {
