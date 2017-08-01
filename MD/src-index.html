@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="lv" xml:lang="lv" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT|Oswald" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="dist/style.min.css" />
+
+    <!-- Bootstrap -->
+    <!-- link for customization http://getbootstrap.com/customize/?id=cba411d5dd68b15404a964020411ca7c -->
+
+    <link rel="stylesheet" href="dist/libs/bootstrap/css/bootstrap.min.css">
+
+    <title>LMA karnevāls</title>
+</head>
+
+<body ng-app="app" id="body">
+    <div ng-include="'dist/templates/menu.html'"></div>
+    <div ng-view></div>
+    <!--<div ng-view class="fromTop"></div>-->
+    <footer>
+        <div ng-include="'dist/templates/footer.html'"></div>
+    </footer>
+    <script src="dist/libraries.min.js"></script>
+    <script src="dist/main.min.js"></script>
+</body>
+
+</html>

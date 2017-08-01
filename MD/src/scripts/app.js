@@ -8,17 +8,17 @@ app.config(['$routeProvider', '$locationProvider',
     function ($routeProvider, $locationProvider) {
         $routeProvider
             .when("/", {
-                templateUrl: "pages/home.html"
+                templateUrl: "dist/pages/home.html"
             }).when("/sakums", {
-                templateUrl: "pages/home.html"
+                templateUrl: "dist/pages/home.html"
             }).when("/par", {
-                templateUrl: "pages/about.html"
+                templateUrl: "dist/pages/about.html"
             }).when("/galerija", {
-                templateUrl: "pages/galery.html"
+                templateUrl: "dist/pages/galery.html"
             }).when("/laikalinija", {
-                templateUrl: "pages/timeline.html"
+                templateUrl: "dist/pages/timeline.html"
             }).when("/jaunumi", {
-                templateUrl: "pages/news.html"
+                templateUrl: "dist/pages/news.html"
             });
         $locationProvider.hashPrefix('');
     }]);

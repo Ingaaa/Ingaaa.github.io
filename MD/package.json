@@ -1,23 +1,24 @@
 {
-  "name": "ejustice",
+  "name": "app",
   "version": "1.0.0",
-  "description": "ejustice",
+  "description": "App for graphic design",
+  "main": "/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "eslint": "eslint"
+    "dev": "lite-server"
   },
-  "author": "",
+  "author": "Inga",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^3.19.0",
-    "eslint-plugin-angular": "^2.4.0",
     "grunt": "~0.4.5",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-cssmin": "^2.0.0",
+    "grunt-contrib-htmlmin": "^2.4.0",
     "grunt-contrib-uglify": "^2.2.0",
-    "grunt-json-minify": "^1.1.0",
-    "grunt-ng-annotate": "^3.0.0"
+    "lite-server": "^2.2.2"
+  },
+  "server": {
+    "baseDir": "/"
   }
 }

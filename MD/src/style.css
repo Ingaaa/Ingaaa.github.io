@@ -80,7 +80,7 @@ a:focus {
 }
 
 .about {
-    background-image: url('pictures/AboutBackground.jpg');
+    background-image: url('/pictures/AboutBackground.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -245,7 +245,7 @@ footer {
 }
 
 .time-line-view {
-    background-image: url('pictures/TimelineBackground.jpg');
+    background-image: url('/pictures/TimelineBackground.jpg');
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -592,7 +592,7 @@ footer {
 }
 
 .home {
-    background-image: url('pictures/background.jpg');
+    background-image: url('/pictures/background.jpg');
     background-repeat: no-repeat;
     margin: 0px;
     padding: 0px;
